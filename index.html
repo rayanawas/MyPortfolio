@@ -407,6 +407,9 @@
            #work2{
             display: none;
            }
+           .this{
+            display: none;
+           }
             }
 
         @media screen and (min-width: 375px){
@@ -1220,8 +1223,8 @@
     </div>
     <div id="work2">
         <div class="container">
-            <img id="workimg" style="      object-fit: fill;" src="Nouveau projet (2).png" alt="">
-            <div class="overlay">Restaurant website <br> vitrine website <br> on field</div>
+            <img id="workimg" style="      object-fit: fill;" src="vet.png" alt="">
+            <div class="overlay">Vétérinaire website <br> E-COMMERCE website <br> </div>
           </div> <div class="container">
             <img id="workimg"  src="Nouveau projet.png" alt="">
             <div class="overlay">Restaurant website <br> vitrine website <br> on field</div>
@@ -1233,6 +1236,18 @@
             <div class="overlay">Restaurant website <br> vitrine website <br> on field</div>
           </div>
     </div>
+    <div id="work1" class="this">
+      <div class="container">
+        <img id="workimg" style="      object-fit: fill;" src="Nouveau projet (2).png" alt="">
+        <div class="overlay">Restaurant website <br> vitrine website <br> on field</div>
+     </div>
+     <div class="container">
+     </div>
+     <div class="container">
+     </div>
+     <div class="container">
+     </div>
+   </div>
       <button onclick="more()"  id="plus"> View more</button>
   </section>
 
@@ -1329,13 +1344,16 @@
     function more(){
     var plus = document.getElementById("plus");
     var work = document.getElementById("work2");
+    var workthis=document.getElementsByClassName("this");
     
     if (work.style.display=='none'){
      work.style.display= 'grid';
+     workthis.style.display= 'grid';
      plus.innerHTML="hide";
     }
  else{
     work.style.display= 'none';
+    workthis.style.display= 'none';
      plus.innerHTML="View more";
    }
      }
